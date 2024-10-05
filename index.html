@@ -10,9 +10,22 @@
 <body>
     <!-- navbar -->
      <nav>
-        <div class="flex items-center justify-between py-5">
+        <!-- left navbar -->
+        <div class="h-screen bg-gray-100 absolute py-5 flex items-start flex-col gap-y-5">
+            <div>
+                <p class="font-bold text-2xl">logo</p>
+            </div>
+            <div class="px-5">
+                <i class="fa-solid fa-box text-2xl text-[#B2B2B2]"></i>
+            </div>
+            <div class="border-l-2 border-orange-600 px-5">
+                <i class="fa-solid fa-box text-2xl text-[#B2B2B2]"></i>
+            </div>
+        </div>
+        <!-- top navbar -->
+        <div class="w-[97%] m-[auto] flex items-center justify-between py-2 bg-gray-200">
             <div class="logo">
-                logo
+                <p class="font-bold text-2xl">logo</p>
             </div>
             <div>
                 <div class="border border-gray-400 py-2 px-3 rounded-3xl">
@@ -20,7 +33,7 @@
                     <input type="text" name="" id="" placeholder="Search Your Parcel" class="border-none outline-none ml-1">
                 </div>
             </div>
-            <div class="flex items-center">
+            <div class="flex items-center gap-5">
                 <!-- box-area -->
                  <div class="border-2 border-red-600 flex gap-2 items-center p-2 rounded-3xl">
                     <i class="fa-solid fa-box"></i>
@@ -37,8 +50,17 @@
                   </div>
                   <!-- number -->
                    <div class="bg-[#F7B8B7] p-3 rounded-full">
-                    <span>1</span>
+                    <span>0</span>
                    </div>
+                   <!-- dropdown -->
+                    <div class="text-gray-500">
+                        <select name="" id="" class="font-semibold">
+                            <option value="">Shop Name</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                        <p class="text-sm ml-1">Marchant</p>
+                    </div>
             </div>
         </div>
      </nav>
