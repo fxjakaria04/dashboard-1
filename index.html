@@ -9,23 +9,78 @@
 </head>
 <body>
     <!-- navbar -->
-     <nav>
+     <nav class="duration-1000 transition-all">
         <!-- left navbar -->
-        <div class="h-screen bg-gray-100 absolute py-5 flex items-start flex-col gap-y-5">
+        <div id="invisibled" onmouseout="toggleRemoved()" onmouseover="toggle()" class="transition-all duration-300 h-screen bg-gray-100 absolute py-5 flex items-start flex-col gap-y-5 -left-16 transition-all duration-1000">
             <div>
                 <p class="font-bold text-2xl">logo</p>
             </div>
-            <div class="px-5">
-                <i class="fa-solid fa-box text-2xl text-[#B2B2B2]"></i>
-            </div>
             <div class="border-l-2 border-orange-600 px-5">
-                <i class="fa-solid fa-box text-2xl text-[#B2B2B2]"></i>
+                <a href="#">
+                    <i class="fa-solid fa-grip"></i>
+                </a>
             </div>
+            <div class="border-l-2 border-transparent border-r-2 px-5 ">
+                <a href="#">
+                    <i class="fa-solid fa-box text-2xl text-[#B2B2B2]"></i>
+                </a>
+            </div>
+            <div class="border-l-2 border-transparent border-r-2 px-5 ">
+                <a href="#">
+                    <i class="fa-solid fa-heart text-2xl text-[#B2B2B2] mt-2"></i>
+                </a>
+            </div>
+            <div class="border-l-2 border-transparent border-r-2 px-5 ">
+                <a href="#">
+                    <i class="fa-solid fa-comment-dots text-2xl text-[#B2B2B2] mt-2"></i>
+                </a>
+            </div>
+            <div class="border-l-2 border-transparent border-r-2 px-5 ">
+                <a href="#">
+                    <i class="fa-solid fa-layer-group text-2xl text-[#B2B2B2] mt-2"></i>
+                </a>
+            </div>
+            <div class="border-l-2 border-transparent border-r-2 px-5 ">
+                <a href="#">
+                    <i class="fa-solid fa-briefcase text-2xl text-[#B2B2B2] mt-2"></i>
+                </a>
+            </div>
+            <div class="border-l-2 border-transparent border-r-2 px-5 ">
+                <a href="#">
+                    <i class="fa-solid fa-file text-2xl text-[#B2B2B2] mt-2"></i>
+                </a>
+            </div>
+            <div class="border-l-2 border-transparent border-r-2 px-5 ">
+                <a href="#">
+                    <i class="fa-solid fa-calendar text-2xl text-[#B2B2B2] mt-2"></i>
+                </a>
+            </div>
+            <div class="border-l-2 border-transparent border-r-2 px-5 ">
+                <a href="#">
+                    <i class="fa-solid fa-clipboard-list text-2xl text-[#B2B2B2] mt-2"></i>
+                </a>
+            </div>
+            <div class="border-l-2 border-transparent border-r-2 px-5 ">
+                <a href="#">
+                    <i class="fa-solid fa-user-group text-2xl text-[#B2B2B2] mt-2"></i>
+                </a>
+            </div>
+            <div class="border-l-2 border-transparent border-r-2 px-5 ">
+                <a href="#">
+                    <i class="fa-regular fa-credit-card text-2xl text-[#B2B2B2] mt-2"></i>
+                </a>
+            </div>
+            <div class="border-l-2 border-transparent border-r-2 px-5 ">
+                <a href="#">
+                    <i class="fa-solid fa-chart-pie text-2xl text-[#B2B2B2] mt-2"></i>
+                </a>
+            </div>
+            
         </div>
         <!-- top navbar -->
-        <div class="w-[97%] m-[auto] flex items-center justify-between py-2 bg-gray-200">
+        <div class="w-[97%] m-[auto] flex items-center justify-between py-2">
             <div class="logo">
-                <p class="font-bold text-2xl">logo</p>
+                <p onmouseover="toggle()" onmouseout="toggleRemoved()" class="font-bold text-2xl">logo</p>
             </div>
             <div>
                 <div class="border border-gray-400 py-2 px-3 rounded-3xl">
@@ -64,5 +119,14 @@
             </div>
         </div>
      </nav>
+     <script>
+        const component = document.getElementById("invisibled");
+        function toggle(){
+            component.classList.remove("-left-16")
+        }
+        function toggleRemoved(){
+            component.classList.add("-left-16")
+        }
+     </script>
 </body>
 </html>
