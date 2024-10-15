@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="public/tailwind.css">
+</head>
+<body>
+    <div x-data="{ isHover: false }" class="flex">
+    <div 
+        :class="isHover ? 'w-[10%]' : 'lg:w-[5%] w-[10%]'" 
+        @mouseenter="isHover = true" 
+        @mouseleave="isHover = false" 
+        class="border-r-2 transition-width duration-300 lg:p-3"
+    >
+
+        <div class="w-full p-1">
+            <a href="#">
+                <img src="src/svg/logo.png" alt="">
+            </a>
+        </div>
+
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-border-all text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-cube text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-heart text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-comment-dots text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-layer-group text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-comment-dots text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-comment-dots text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-file-lines text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-calendar text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-clipboard text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-user-group text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-credit-card text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-chart-pie text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-user text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-gear text-[#B2B2B2] hover:text-[#FF4848] text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="text-lg text-[#646464] font-medium">Option</p>
+            </a>
+        </div>
+        <div class="w-full flex items-center justify-center lg:justify-start my-[15px]">
+            <a class="flex items-center gap-3" href="#">
+                <i class="fa-solid fa-power-off  text-xl"></i>
+                <p :class="isHover ? 'lg:inline hidden' : 'hidden'" class="hidden text-lg text-[#646464] font-medium">power</p>
+            </a>
+        </div>
+
+    </div>
+    <div 
+        :class="isHover ? 'w-[90%]' : 'lg:w-[95%] w-[90%]'" 
+        class="bg-green-200 transition-width duration-300"
+    >
+        b
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+</html>

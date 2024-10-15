@@ -11,90 +11,143 @@
     <!-- navbar -->
      <nav class="duration-1000 transition-all">
         <!-- left navbar -->
-        <div id="invisibled" onmouseout="toggleRemoved()" onmouseover="toggle()" class="transition-all duration-300 h-screen bg-white absolute flex items-start flex-col gap-y-[7px] -left-16">
-            <div class="w-full flex items-center justify-center pt-5">
-                <!-- <p class="font-bold text-2xl">loko</p> -->
-                 <a href="/" class="cursor-pointer">
-                    <img src="src/svg/logo.svg" alt="">
-                 </a>
-            </div>
-            <div class="border-l-2 border-orange-600 px-5">
-                <a href="#">
-                    <i class="fa-solid fa-grip"></i>
-                </a>
-            </div>
-            <div class="border-l-2 border-transparent border-r-2 px-5 ">
-                <a href="#">
-                    <i class="fa-solid fa-box text-2xl text-[#B2B2B2] hover:text-orange-500"></i>
-                </a>
-            </div>
-            <div class="border-l-2 border-transparent border-r-2 px-5 ">
-                <a href="#">
-                    <i class="fa-solid fa-heart text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
-                </a>
-            </div>
-            <div class="border-l-2 border-transparent border-r-2 px-5 ">
-                <a href="#">
-                    <i class="fa-solid fa-comment-dots text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
-                </a>
-            </div>
-            <div class="border-l-2 border-transparent border-r-2 px-5 ">
-                <a href="#">
-                    <i class="fa-solid fa-layer-group text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
-                </a>
-            </div>
-            <div class="border-l-2 border-transparent border-r-2 px-5 ">
-                <a href="#">
-                    <i class="fa-solid fa-briefcase text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
-                </a>
-            </div>
-            <div class="border-l-2 border-transparent border-r-2 px-5 ">
-                <a href="#">
-                    <i class="fa-solid fa-file text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
-                </a>
-            </div>
-            <div class="border-l-2 border-transparent border-r-2 px-5 ">
-                <a href="#">
-                    <i class="fa-solid fa-calendar text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
-                </a>
-            </div>
-            <div class="border-l-2 border-transparent border-r-2 px-5 ">
-                <a href="#">
-                    <i class="fa-solid fa-clipboard-list text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
-                </a>
-            </div>
-            <div class="border-l-2 border-transparent border-r-2 px-5 ">
-                <a href="#">
-                    <i class="fa-solid fa-user-group text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
-                </a>
-            </div>
-            <div class="border-l-2 border-transparent border-r-2 px-5 ">
-                <a href="#">
-                    <i class="fa-regular fa-credit-card text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
-                </a>
-            </div>
-            <div class="border-l-2 border-transparent border-r-2 px-5 ">
-                <a href="#">
-                    <i class="fa-solid fa-chart-pie text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
-                </a>
-            </div>
-            <div class="border-l-2 border-transparent border-r-2 px-5 ">
-                <a href="#">
-                    <i class="fa-solid fa-user text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
-                </a>
-            </div>
-            <div class="border-l-2 border-transparent border-r-2 px-5 ">
-                <a href="#">
-                    <i class="fa-solid fa-gear text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
-                </a>
-            </div>
-            <div class="border-l-2 border-transparent border-r-2 px-5 ">
-                <a href="#">
-                    <i class="fa-solid fa-power-off text-2xl text-[#000] mt-2 hover:text-orange-500 duration-200"></i>
-                </a>
-            </div>
-            
-        </div>
+        <div id="invisibled" x-data="{ isHovered: false }" 
+     @mouseover="isHovered = true" 
+     @mouseleave="isHovered = false" 
+     class="transition-all duration-300 h-screen bg-white absolute flex items-start flex-col gap-y-[7px] left-0">
+
+    <div class="w-[60px] flex items-center justify-center pt-5">
+        <a href="/" class="cursor-pointer flex">
+            <img src="src/svg/logo.svg" alt="">
+        </a>
+    </div>
+    
+    <div :class="{'expand': isHovered, 'collapse': !isHovered}" 
+         class="border-l-2 border-orange-600 px-5 transition-width duration-300">
+        <a href="#" class="flex items-center gap-4 hover:bg-gray-100 ">
+            <i class="fa-solid fa-grip"></i>
+            <p class="hover" x-show="isHovered">STORE</p>
+        </a>
+    </div>
+
+    <!-- Rest of your code remains unchanged -->
+    <div class="border-l-2 border-transparent border-r-2 px-5 ">
+        <a href="#" id="text" class="flex items-center gap-4">
+            <i class="fa-solid fa-grip text-2xl text-[#B2B2B2] hover:text-orange-500"></i>
+            <p class="hover" x-show="isHovered">STORE</p>
+        </a>
+    </div>
+    <div class="border-l-2 border-transparent border-r-2 px-5"
+    x-data="{ isHovered: false, textColor: 'text-black' }" 
+     @mouseover="isHovered = true; textColor = 'text-orange-500'" 
+     @mouseleave="isHovered = false; textColor = 'text-black'">
+        <a href="#" id="text" class="flex items-center gap-4">
+            <i class="fa-solid fa-box text-2xl text-[#B2B2B2] hover:text-orange-500"></i>
+            <p class="hover" x-show="isHovered"  @mouseover="isHovered = true" 
+            @mouseleave="isHovered = false" >STORE</p>
+        </a>
+    </div>
+    <div class="border-l-2 border-transparent border-r-2 px-5 ">
+        <a href="#">
+            <i class="fa-solid fa-heart text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
+        </a>
+    </div>
+    <div class="border-l-2 border-transparent border-r-2 px-5 ">
+        <a href="#">
+            <i class="fa-solid fa-comment-dots text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
+        </a>
+    </div>
+    <div class="border-l-2 border-transparent border-r-2 px-5 ">
+        <a href="#">
+            <i class="fa-solid fa-layer-group text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
+        </a>
+    </div>
+    <div class="border-l-2 border-transparent border-r-2 px-5 ">
+        <a href="#">
+            <i class="fa-solid fa-briefcase text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
+        </a>
+    </div>
+    <div class="border-l-2 border-transparent border-r-2 px-5 ">
+        <a href="#">
+            <i class="fa-solid fa-file text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
+        </a>
+    </div>
+    <div class="border-l-2 border-transparent border-r-2 px-5 ">
+        <a href="#">
+            <i class="fa-solid fa-calendar text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
+        </a>
+    </div>
+    <div class="border-l-2 border-transparent border-r-2 px-5 ">
+        <a href="#">
+            <i class="fa-solid fa-clipboard-list text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
+        </a>
+    </div>
+    <div class="border-l-2 border-transparent border-r-2 px-5 ">
+        <a href="#">
+            <i class="fa-solid fa-user-group text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
+        </a>
+    </div>
+    <div class="border-l-2 border-transparent border-r-2 px-5 ">
+        <a href="#">
+            <i class="fa-regular fa-credit-card text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
+        </a>
+    </div>
+    <div class="border-l-2 border-transparent border-r-2 px-5 ">
+        <a href="#">
+            <i class="fa-solid fa-chart-pie text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
+        </a>
+    </div>
+    <div class="border-l-2 border-transparent border-r-2 px-5 ">
+        <a href="#">
+            <i class="fa-solid fa-user text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
+        </a>
+    </div>
+    <div class="border-l-2 border-transparent border-r-2 px-5 ">
+        <a href="#">
+            <i class="fa-solid fa-gear text-2xl text-[#B2B2B2] mt-2 hover:text-orange-500 duration-200"></i>
+        </a>
+    </div>
+    <div class="border-l-2 border-transparent border-r-2 px-5 ">
+        <a href="#">
+            <i class="fa-solid fa-power-off text-2xl text-[#000] mt-2 hover:text-orange-500 duration-200"></i>
+        </a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
+
+<style>
+    .expand {
+        animation: expand 0.3s forwards;
+    }
+
+    .collapse {
+        animation: collapse 0.3s forwards;
+    }
+
+    @keyframes expand {
+        from {
+            width: 0;
+        }
+        to {
+            width: 150px; /* Set this to your desired width */
+        }
+    }
+
+    @keyframes collapse {
+        from {
+            width: 150px; /* Set this to your desired width */
+        }
+        to {
+            width: 0;
+        }
+    }
+
+    .transition-width {
+        overflow: hidden; /* Prevents overflow during collapse */
+    }
+</style>
+
         <!-- top navbar -->
         <div class="w-[97%] m-[auto] flex items-center justify-between py-2">
             <div class="logo flex items-center gap-5">
@@ -145,23 +198,25 @@
         <div class="w-11/12 m-auto">
             <div class="">
                 <div class="topbar flex items-center justify-center">
-                    <div class="flex bg-[#FDEBEB] rounded-bl-lg rounded-br-lg">
-                        <a href="@" class="flex gap-2 border-r-2 px-3 my-2 mr-0">
+                    <div class="flex bg-gray-200 rounded-bl-[50px] rounded-br-[50px] relative">
+                        <a href="#" class="flex gap-2 border-r-2 px-5 my-2 mr-0">
                             <img src="src/svg/add-parcel.svg" alt="">
                             <p>Add Parcel</p>
                         </a>
-                        <a href="@" class="flex gap-2 border-r-2 px-3 mr-0 my-2">
+                        <a href="#" class="flex gap-2 border-r-2 px-3 mr-0 my-2">
                             <img src="src/svg/upload.svg" alt="">
                             <p>Bulk Import</p>
                         </a>
-                        <a href="@" class="flex gap-2 border-r-2 px-3 mr-0 my-2">
+                        <a href="#" class="flex gap-2 border-r-2 px-3 mr-0 my-2">
                             <img src="src/svg/fast-delivery.svg" alt="">
                             <p>Express Delivery</p>
                         </a>
-                        <a href="@" class="flex gap-2 px-3 mr-0 my-2">
+                        <a href="#" class="flex gap-2 px-5 mr-0 my-2">
                             <img src="src/svg/all-parcel.svg" alt="">
                             <p>All Parcel</p>
                         </a>
+                        <div class="absolute h-5 w-[3rem] left-[-24px] top-[16px] bg-[#FFF5F5] rotate-[65deg]"></div>
+                        <div class="absolute h-5 w-[3rem] right-[-24px] top-[16px] bg-[#FFF5F5] rotate-[-65deg]"></div>
                     </div>
                 </div>
             </div>
